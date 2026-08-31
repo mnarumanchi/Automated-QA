@@ -42,6 +42,7 @@ def login_dev():
     #Login using dev QA credentials
     url = "https://api-dev.cybersenz.com/api/v1/auth/login"
     headers = {"email": "qa", "password": "Qa"}
+    #email and password to either be in a .env or entered by user. Change this to reflect that.
     response = requests.get(url, headers=headers)
     data = response.json()
 
@@ -53,6 +54,7 @@ def login_dev():
     #Verify OTP
     url = "https://api-dev.cybersenz.com/api/v1/auth/verify-otp"
     headers = {"email": "qa", "otp": "000000"}
+    #OTP to be in a .env or entered by user. Change this to reflect that.
     response = requests.get(url, headers=headers)
     data = response.json()
 
