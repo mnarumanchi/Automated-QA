@@ -1,0 +1,150 @@
+{
+  "SAVR7": {
+    "config_path": "C:\\ProgramData\\Cybersenz\\config\\config.json",
+    "expected_agents": [
+      {
+        "process_name": "ollama.exe",
+        "confidence_range": [
+          0.9,
+          0.95
+        ],
+        "expect_service_type": "LocalModel"
+      },
+      {
+        "process_name": "M365Copilot.exe",
+        "confidence_range": [
+          0.9,
+          0.95
+        ],
+        "expect_service_type": "DesktopApp"
+      }
+    ],
+    "library_processes": [
+      {
+        "process_name": "python.exe",
+        "confidence_range": [
+          0.8,
+          0.95
+        ],
+        "note": "python + torch import -- requires LibraryAnalysis (SAVR-16)"
+      }
+    ]
+  },
+  "SAVR14": {
+    "by_name": {},
+    "by_pid": {
+      "8556": {
+        "label": "httpbin fixture",
+        "domain": "httpbin.org"
+      }
+    }
+  },
+  "SAVR13": {},
+  "SAVR18": {
+    "domains": [
+      "httpbin.org",
+      "chatgpt.com"
+    ]
+  },
+  "SAVR15": {
+    "domains": [
+      "copilot.microsoft.com",
+      "chat.openai.com"
+    ]
+  },
+  "SAVR43_1": {},
+  "SAVR43_2": {
+    "required_fields": [
+      "ip_address",
+      "hostname",
+      "device_token",
+      "status"
+    ],
+    "stats_key": "sys_stats",
+    "stats_required": [
+      "cpu_percent",
+      "memory_mb",
+      "disk_usage",
+      "uptime"
+    ],
+    "last_scan_time_format": "epoch",
+    "require_response_success": true
+  },
+  "SAVR43_3": {},
+  "SAVR16": {
+    "expected_provider": "EDD08927",
+    "expected_event_id": 12,
+    "max_event_rate_per_sec": 1000,
+    "require_zero_lost": true,
+    "max_cpu_pct": 5.0,
+    "max_memory_kb": 51200,
+    "expect_matched_min": 0,
+    "expect_dropped_min": 0
+  },
+  "SAVR6": {
+    "expected_agents": [
+      {
+        "process_name": "ollama.exe",
+        "expected_libraries": []
+      },
+      {
+        "process_name": "python.exe",
+        "expected_libraries": [
+          "torch_python.dll",
+          "torch_cpu.dll"
+        ]
+      }
+    ]
+  },
+  "SAVR9": {
+    "expected_agents": [
+      {
+        "process_name": "ollama.exe",
+        "agent_process_integrity_level": "Medium",
+        "agent_process_is_elevated": false
+      },
+      {
+        "process_name": "M365Copilot.exe",
+        "agent_process_integrity_level": "Medium",
+        "agent_process_is_elevated": false
+      }
+    ]
+  },
+  "SAVR17": {
+    "expected_agents": [
+      {
+        "process_name": "python.exe",
+        "library_name": "torch_python.dll"
+      }
+    ]
+  },
+  "SAVR4": {
+    "udp_enumeration_shipped": false,
+    "quic_heuristic_processes": [
+      "chrome.exe"
+    ]
+  },
+  "SAVR29": {
+    "max_lookahead": 2000
+  },
+  "SAVR12": {
+    "by_pid": {
+      "6504": {
+        "label": "openai fixture",
+        "domain": "openai.com"
+      }
+    }
+  },
+  "SAVR27a28": {
+    "expect_service_type": "LocalModel",
+    "expect_detection_method": "ContainerAnalysis",
+    "expect_container_name": "ollama_mount_test",
+    "expect_model_mount": "/models/tinyllama.gguf"
+  },
+  "SAVR40": {
+    "cpu_idle_max_pct": 3.0,
+    "io_read_max_mb": 100.0,
+    "memory_slope_max_kb": 500.0
+  },
+  "SAVR5": {}
+}
